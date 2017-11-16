@@ -16,8 +16,9 @@
         
  <%   
             int age = 25;
-String name = "上野"; 
-            out.print("初めまして上野拓朗と申します");
+String name = "上野拓朗"; 
+            out.print("初めまして"+name+"と申します");
+            
             
             float point = 0.8F;
 float ap = age * point;
