@@ -16,12 +16,12 @@
         
  <%   
             int age = 25;
-String name = "上野拓朗"; 
+            String name = "上野拓朗"; 
             out.print("初めまして"+name+"と申します");
             
             
             float point = 0.8F;
-float ap = age * point;
+            float ap = age * point;
  %>
         
     </body>
