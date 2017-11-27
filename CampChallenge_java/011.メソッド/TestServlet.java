@@ -19,6 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 public class TestServlet extends HttpServlet {
 
     public static void myprofile(PrintWriter pw) {
+        
         pw.print("私の名前は上野拓朗です<br>");
         pw.print("生年月日は1992/06/07<br>");
         pw.print("趣味はネットショッピングです<br>");
@@ -46,10 +47,11 @@ public class TestServlet extends HttpServlet {
             out.println("<body>");
             out.println("<h1>Servlet TestServlet at " + request.getContextPath() + "</h1>");
             
-            
-            myprofile(out);
-            
-            
+        for (int i = 0; i < 10; i++){
+  myprofile(out);  
+}
+             
+             
             out.println("</body>");
             out.println("</html>");
         }
