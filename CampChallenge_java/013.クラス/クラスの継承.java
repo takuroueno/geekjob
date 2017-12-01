@@ -10,7 +10,7 @@
  */
 public class person extends Human {
 
-    String msg = "講師の" + this.name + "です。講義を始めます。";
+    //String msg = "講師の" + this.name + "です。講義を始めます。";
 
 }
 
