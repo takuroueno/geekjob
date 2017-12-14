@@ -12,31 +12,38 @@ and open the template in the editor.
     </head>
     <body>
 
+
         <form action="data.jsp" method="post">
 
-          氏名   <input type="text" name="txtName">
+            <big>  氏名  </big> <input type="text" name="txtName">
             <br>
-                      <br>
+            <br>
 
-           性別  <input type="radio" name="rdoSample" value="男">男
+            <big> 性別 </big> <input type="radio" name="rdoSample" value="男">男
             <input type="radio" name="rdoSample" value="女">女
             <br>
 
             <BR>
-            <input type= button onclick="alert('なんか出る')">
+            <big>  趣味  </big>  <textarea name="mulText"></textarea>
             <BR>
-                        <br>
-
-        趣味    <textarea name="mulText"></textarea>
+            <br>
+            
+            <p>血液型：<br>
+                <select name="cmbList">
+                        <option value="A">A型</option>
+                    <option value="B">B型</option>
+                    <option value="O">O型</option>
+                    <option value="AB">AB型</option>
+                </select></p>    
             <BR>
-                        <br>
-
-            <select name="cmbList"></select>
-            <BR>
-                        <br>
-
+            <br>
+<strong> 押すと </strong> <input type= button onclick="alert('なんか出る')"> 
+            <br>
+            <br>
             <input type="submit" name="btnSubmit">
             <BR>
         </form>
+
+
     </body>
 </html>
