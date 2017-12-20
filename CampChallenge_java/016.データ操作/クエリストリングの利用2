@@ -41,9 +41,9 @@
 
             out.println("一個あたりのの値段" + t / n + "円");
 
-            BigDecimal bd = new BigDecimal(t);
+           // BigDecimal bd = new BigDecimal(t);
 
-            BigDecimal bd2 = bd.setScale(0, BigDecimal.ROUND_DOWN);  //小数第１位
+           // BigDecimal bd2 = bd.setScale(0, BigDecimal.ROUND_DOWN);  //小数第１位
 
             // System.out.println(bd2.doubleValue());
             if (t <= 3000) {
