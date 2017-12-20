@@ -1,0 +1,48 @@
+<%-- 
+    Document   : soin
+    Created on : 2017/12/20, 13:59:21
+    Author     : uenotakuro
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+
+        <%
+            request.setCharacterEncoding("UTF-8");
+            String i2 = request.getParameter("para");
+
+            int t = Integer.parseInt(i2);
+
+            out.println("元の値" + t);
+            int m = t;
+
+            out.print("一桁の素因数");
+            // 2 で割れるだけ割り算する
+            while (m % 2 == 0) {
+                m /= 2;
+                out.print(2);
+            }
+
+            out.print("一桁の素因数");
+            // 奇数で割り算していく
+            for (int r = 3; r * r <= m; r += 2) {
+                while (m % r == 0) {
+                    m /= r;
+                    out.print(r);
+                }
+            }
+            out.print("余った値");
+            if (m > 1) {
+                out.print(m);
+            }
+
+
+        %>
+    </body>
+</html>

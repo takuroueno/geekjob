@@ -1,0 +1,21 @@
+<%-- 
+    Document   : send_soin
+    Created on : 2017/12/20, 14:00:38
+    Author     : uenotakuro
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <form action="/query/kadai_2/soin.jsp" method="get">
+            <big>  数値  </big> <input type="text" name="para">
+            <br>
+            <big>  <input type="submit" name="btnSubmit"> </big> 
+        </form>
+    </body>
+</html>
