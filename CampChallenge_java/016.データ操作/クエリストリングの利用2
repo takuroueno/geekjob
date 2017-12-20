@@ -1,0 +1,60 @@
+<%-- 
+    Document   : newjsp
+    Created on : 2017//19, 17:51:22
+    Author     : uenotakuro
+--%>
+
+<%@page import="java.math.BigDecimal"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <%
+            request.setCharacterEncoding("UTF-8");
+            String i2 = request.getParameter("txtName");
+            String i3 = request.getParameter("mulText");
+            String i = request.getParameter("rdoSample");
+            // if(i=null&&i!equals="")
+            //if(i.equals("1")){  }
+            int v = Integer.parseInt(i);
+            //文字を数字
+
+            switch (v) {
+                case 1:
+                    out.println("雑貨");
+                    break;
+                case 2:
+                    out.println("生鮮食品");
+                    break;
+                default:
+                    out.println("その他");
+                    break;
+            }
+
+            int t = Integer.parseInt(i2);
+
+            int n = Integer.parseInt(i3);
+
+            out.println("一個あたりのの値段" + t / n + "円");
+
+            BigDecimal bd = new BigDecimal(t);
+
+            BigDecimal bd2 = bd.setScale(0, BigDecimal.ROUND_DOWN);  //小数第１位
+
+            // System.out.println(bd2.doubleValue());
+            if (t <= 3000) {
+                int total = (int) (t * 0.04);
+                out.println(total + "ポイントが付きます");
+            } else if (t <= 5000) {
+                int total = (int) (t * 0.05);
+                out.println(total+ "ポイントが付きます");
+            }
+
+        %>
+
+    </body>
+</html>
