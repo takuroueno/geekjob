@@ -1,0 +1,91 @@
+<%-- 
+    Document   : session2
+    Created on : 2017/12/21, 11:26:11
+    Author     : uenotakuro
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <form action="/session/session2.jsp" method="post">
+
+            <%
+
+                request.setCharacterEncoding("UTF-8");
+                String n = request.getParameter("name");
+                String h = request.getParameter("hobby");
+                String j = request.getParameter("jender");
+                if (j == null) {
+                    j = "";
+                }
+                if (h == null) {
+                    h = "";
+                }
+                if (n == null) {
+                    n = "";
+                }
+
+// セッションへ"Data"という名前で"寿司"を登録
+                HttpSession hs = request.getSession();
+
+// genderがnullじゃないか判断
+                // nullじゃなかったら、genderの中身は「男」なのか「女」なのか判断
+                // 男だったら、変数otokoにcheckedを代入
+                // 女だったら、変数onnaにcheckedを代入
+                String otoko = "";
+                String onna = "";
+
+                if (j.equals("男")) {
+                    otoko = "checked";
+
+                } else if (j.equals("女")) {
+                    onna = "checked";
+                }
+
+                // ヨーダ記法（多用するとウザがられるかも）
+//                if( "男".equals(j) ){
+//                    otoko= "checked";
+//                    onna = "";
+//                }else if( "女".equals(j) ){
+//                    otoko="";
+//                    onna="checked";
+//                }
+
+
+
+                // セッションへ登録
+                hs.setAttribute("名前", n);
+                hs.setAttribute("性別", j);
+                hs.setAttribute("趣味", h);
+
+// セッションから情報を取得 -- 寿司
+                String name = (String) hs.getAttribute("名前");
+                String gender = (String) hs.getAttribute("性別");
+                String hobby = (String) hs.getAttribute("趣味");
+
+            %>
+
+
+
+
+
+            <big>  名前  </big> <input type="text" name="name"value= <%if (name != null) {
+                    out.print(name);
+                }%>>
+            <br>
+            <p> <big> 性別 </big> <input type="radio" name="jender"value="男" <%=otoko%>>男 
+            <input type="radio" name="jender" value="女" <%=onna%>>女</p> 
+            <big>  趣味  </big>  <textarea name="hobby"><%if (hobby != null) {
+                    out.print(hobby);
+                }%></textarea>
+            <br>
+            <big>  <input type="submit" name="btnSubmit"> </big>
+
+        </form>
+    </body>
+</html>
