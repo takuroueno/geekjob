@@ -1,0 +1,35 @@
+<%-- 
+    Document   : JDBC12
+    Created on : 2018/01/05, 17:41:13
+    Author     : uenotakuro
+--%>
+<%@page import="JDBC.JDBC12"%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+   <form action="/jdbc/JDBC12" method="post">
+
+
+          
+            <big>  名前  </big> <input type="text" name="name">
+            <br>
+            
+            <big>  年齢  </big> <input type="text" name="age">
+            <br>
+            
+             <big>  誕生日  </big> <input type="text" name="birthday">
+            <br>
+
+
+
+            <big>  <input type="submit" name="btnSubmit"> </big>
+
+        </form>
+    </body>
+</html>
