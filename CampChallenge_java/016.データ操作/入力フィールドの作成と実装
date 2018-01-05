@@ -30,7 +30,7 @@
                     n = "";
                 }
 
-// セッションへ"Data"という名前で"寿司"を登録
+// セッションへ"Data"という名前で""を登録
                 HttpSession hs = request.getSession();
 
 // genderがnullじゃないか判断
@@ -63,7 +63,7 @@
                 hs.setAttribute("性別", j);
                 hs.setAttribute("趣味", h);
 
-// セッションから情報を取得 -- 寿司
+// セッションから情報を取得 -- 
                 String name = (String) hs.getAttribute("名前");
                 String gender = (String) hs.getAttribute("性別");
                 String hobby = (String) hs.getAttribute("趣味");
