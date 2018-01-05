@@ -59,8 +59,8 @@ public class JDBC11 extends HttpServlet {
             PreparedStatement db_st = null;
             db_st = db_con.prepareStatement("update profiles set name=?,tel=?,age=?,birthday=? where profileID=1");
             db_st.setString(1, formname);
-            db_st.setInt(2, forma);
-            db_st.setString(3, formtel);
+            db_st.setString(2, formtel);
+            db_st.setInt(3, forma);
             db_st.setString(4, formbirthday);
 
             int num = db_st.executeUpdate();
