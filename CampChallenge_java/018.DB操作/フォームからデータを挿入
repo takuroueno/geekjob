@@ -1,0 +1,39 @@
+<%-- 
+    Document   : JDBC9form
+    Created on : 2018/01/05, 15:37:33
+    Author     : uenotakuro
+--%>
+<%@page import="JDBC.JDBC9"%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <form action="/jdbc/JDBC9" method="post">
+
+            
+             <big>  profileID  </big> <input type="text" name="ID">
+            <br>
+
+            <big>  名前  </big> <input type="text" name="name">
+            <br>
+            
+             <big>  電話番号  </big> <input type="text" name="tel">
+            <br>
+            
+            <big>  年齢  </big> <input type="text" name="age">
+            <br>
+            
+             <big>  生年月日  </big> <input type="text" name="birthday">
+            <br>
+
+
+            <big>  <input type="submit" name="btnSubmit"> </big>
+
+        </form>
+    </body>
+</html>

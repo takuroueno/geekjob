@@ -1,0 +1,27 @@
+<%-- 
+    Document   : JDBC10
+    Created on : 2018/01/05, 17:10:17
+    Author     : uenotakuro
+--%>
+<%@page import="JDBC.JDBC10"%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+         <form action="/jdbc/JDBC10" method="post">
+
+            
+             <big>  profileID  </big> <input type="text" name="ID">
+            <br>
+
+
+            <big>  <input type="submit" name="btnSubmit"> </big>
+
+        </form>
+    </body>
+</html>
