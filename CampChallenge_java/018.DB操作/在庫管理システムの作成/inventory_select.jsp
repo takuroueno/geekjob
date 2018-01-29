@@ -23,7 +23,7 @@
                 <caption>商品一覧</caption>
                 <thead style="background:#ffccff">
                     <tr>
-                        <th><big>商品ID</big></th>
+                <th><big>商品ID</big></th>
                 <th><big>在庫</big></th>
                 <th><big>商品名</big></th>
                 <th><big>価格</big></th>
