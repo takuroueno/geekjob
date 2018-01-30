@@ -47,10 +47,10 @@ public class session extends HttpServlet {
             SimpleDateFormat sdf
                     = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 
-            // セッションへ"Data"という名前で"寿司"を登録
+            // セッションへ"Data"という名前で""を登録
             HttpSession hs = request.getSession();
 
-            // セッションから情報を取得 -- 寿司
+            // セッションから情報を取得 -- 
             String time = (String) hs.getAttribute("LastLogin");
 
             // セッションへ登録
